@@ -271,14 +271,31 @@ header.masthead .post-heading .meta a {
   color: #212529;
 }
 
-.post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
+.post-preview > a:focus, .post-preview > a:hover  {
   color: #0085A1;
+  text-decoration: none;
 }
 
-.post-preview > a > .post-title {
+.post-preview:hover > .delete-post{
+  font-size: 20px;
+  visibility: visible !important;
+  text-align: end !important;
+}
+
+.post-preview:hover > .delete-post > .button {
+  border: none;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+.post-preview > .delete-post{
+  visibility: hidden;
+}
+
+
+
+.post-preview > a > .post-title, a {
   font-size: 30px;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -304,10 +321,22 @@ header.masthead .post-heading .meta a {
   color: #0085A1;
 }
 
+.options-post{
+  text-align: end;
+}
+
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
     font-size: 36px;
   }
+
+  .options-post{
+    text-align: end;
+  }
+}
+
+.options-post{
+  text-align: end;
 }
 
 .floating-label-form-group {

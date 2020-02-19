@@ -1,3 +1,7 @@
+<?php 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,7 @@
       include 'src/components/nav.php';
     ?>
 
-  <header class="masthead" style="background-image: url('src/img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('src/public/img/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -42,11 +46,11 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Contact Form JavaScript -->
-  <script src="src/js/jqBootstrapValidation.js"></script>
-  <script src="src/js/contact_me.js"></script>
+  <script src="src/public/js/jqBootstrapValidation.js"></script>
+  <script src="src/public/js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="src/js/clean-blog.min.js"></script>
+  <script src="src/public/js/clean-blog.min.js"></script>
 
 </body>
 </html>

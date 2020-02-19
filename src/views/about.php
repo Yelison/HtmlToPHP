@@ -13,7 +13,7 @@
   ?>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('src/img/post-bg.jpg')">
+  <header class="masthead" style="background-image: url('src/public/img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -87,7 +87,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="src/s/clean-blog.min.js"></script>
+  <script src="src/public/js/clean-blog.min.js"></script>
 
 </body>
 
