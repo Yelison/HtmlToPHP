@@ -1,16 +1,3 @@
-<?php 
-  use bcmPHP\controllers\PostController;
-  use bcmPHP\db\Connection;
-  use bcmPHP\models\PostModel;
-
-  $posts = new postController(new PostModel(Connection::pdo()));
-  
-  function test($id){
-    $posts->deletePost($id);
-  };
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
  <!-- Head -->
@@ -19,7 +6,6 @@
 ?>
 
 <body>
-
   <!-- Navigation -->
   <?php
     include 'src/components/nav.php';
@@ -67,7 +53,7 @@
                         <a href='#'>{$post->autor}</a>
                           on July 8, 2019</p>
                         </div>";
-          }, $posts->dataPost());
+          }, $this->model->get());
           if (isset($_POST['action'])) {
             test($post->id);
           }
@@ -77,8 +63,6 @@
           };
 
         ?>
-
-        
         <hr>
         <!-- Pager -->
         <div class="clearfix">
@@ -102,3 +86,4 @@
 </body>
 
 </html>
+

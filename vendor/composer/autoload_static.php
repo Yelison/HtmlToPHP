@@ -20,11 +20,19 @@ class ComposerStaticInit8f9d134c51858cec1b82d016669952ad
         ),
     );
 
+    public static $classMap = array (
+        'bcmPHP\\Router' => __DIR__ . '/../..' . '/src/Router.php',
+        'bcmPHP\\controllers\\PostController' => __DIR__ . '/../..' . '/src/controllers/PostController.php',
+        'bcmPHP\\db\\Connection' => __DIR__ . '/../..' . '/src/db/Connection.php',
+        'bcmPHP\\models\\PostModel' => __DIR__ . '/../..' . '/src/models/PostModel.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8f9d134c51858cec1b82d016669952ad::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8f9d134c51858cec1b82d016669952ad::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8f9d134c51858cec1b82d016669952ad::$classMap;
 
         }, null, ClassLoader::class);
     }

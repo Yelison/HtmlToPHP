@@ -1,21 +1,30 @@
 <?php namespace bcmPHP\controllers;
-use bcmPHP\db\Connection;
+
+use bcmPHP\models\PostModel;
 
 class PostController {
-    private $module;
 
-
-    public function __construct($model){
-        $this->model = $model;
-    } 
+    public function __construct(){
+        $this->model = new PostModel();
+    }
 
     public function dataPost() {
         return $this->model->get();
     }
 
+    public function addPost($tabName){
+        return $this->model->post($tabName);
+    }
+
     public function deletePost($id){
         return $this->model->delete($id);
     }
+
+    public function savePost($id){
+        return $this->model->update($id);
+    }
+
+    public function hashExist ($hash){
+        return $this->model->hash($hash);
+    }
 }
-
-

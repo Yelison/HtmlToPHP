@@ -2,11 +2,8 @@
 
 use bcmPHP\models\PostModel;
 use bcmPHP\db\Connection;
+use bcmPHP\controllers\PostController;
 
-$title = $_POST['name'];
-$autor = $_POST['autor'];
-$content = $_POST['content'];
+$postModel = new PostController();
 
-$postModel = new PostModel((new Connection)::pdo());
-
-$postModel->post('posts', $title, $autor, $content);
+$postModel->addPost('posts');

@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'bcmPHP\\Router' => $baseDir . '/src/Router.php',
+    'bcmPHP\\controllers\\PostController' => $baseDir . '/src/controllers/PostController.php',
+    'bcmPHP\\db\\Connection' => $baseDir . '/src/db/Connection.php',
+    'bcmPHP\\models\\PostModel' => $baseDir . '/src/models/PostModel.php',
 );
