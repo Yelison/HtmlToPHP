@@ -276,31 +276,29 @@ header.masthead .post-heading .meta a {
   text-decoration: none;
 }
 
-.post-preview:hover > .options-post > .delete-post{
+.post-preview:hover > .options-post{
   font-size: 20px;
   visibility: visible !important;
   text-align: end !important;
   border:solid 1px #fff;
 }
 
-.delete-post {
+.delete-post, .edit-post {
   border: solid 1px white;
   display: flex;
   width: 20%;
   justify-content: flex-end;
 }
 
-.post-preview:hover > .options-post > .delete-post > .button {
+.post-preview:hover > .options-post > .button {
   border:solid 1px #fff;
   font-size: 20px;
   background-color: #fff;
 }
 
-.post-preview > .options-post > .delete-post{
+.post-preview > .options-post{
   visibility: hidden;
 }
-
-
 
 .post-preview > a > .post-title, a {
   font-size: 30px;

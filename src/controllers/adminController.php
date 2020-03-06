@@ -1,9 +1,16 @@
-<?php 
+<?php namespace bcmPHP\controllers;
 
-use bcmPHP\models\PostModel;
-use bcmPHP\db\Connection;
 use bcmPHP\controllers\PostController;
 
-$postModel = new PostController();
+class AdminController extends  PostController {
+  
+  public function addPost($tabName){
+    return $this->model->post($tabName);
+  }
 
-$postModel->addPost('posts');
+  public function setHash(){
+    
+    var_dump("hole");
+  }
+}
+(new AdminController())->addPost('posts');

@@ -1,19 +1,13 @@
 <?php namespace bcmPHP;
-
-
 use bcmPHP\controllers\PostController;
-use bcmPHP\models\PostModel;
-use bcmPHP\db\Connection;
-
-require_once 'src/controllers/PostController.php';
-require_once 'src/db/Connection.php';
-require_once 'src/models/PostModel.php';
-  
-$posts = new PostController(new PostModel(Connection::pdo()));
 
 class Router {
 
   protected $route = [];
+
+  public function __construct(){
+    $this->controller = new PostController();
+  }
 
   public function set($dir, $file){
     if(!array_key_exists($dir, $this->route)){

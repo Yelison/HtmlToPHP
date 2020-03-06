@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $('.del-post').click(function(event){
+    $('.delete-post').click(function(event){
         event.preventDefault();
-        var ajaxurl = `src/actions/actions.php?action=delete&id=${jQuery(this).attr("id").replace('delete', '')}`; 
+        var ajaxurl = `src/actions/actions.php?action=delete&id=${event.target.id.replace('del', '')}`; 
         if(confirm('Are you sure than you want delete this post?')){
             $.post(ajaxurl, {});
             $('body').load('/');
@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     $('.edit-post').click(function(event){
         
-        const id = event.currentTarget.id;
+        const id = event.target.id;
         let preview = $(`#${id.replace('edit', '')}`);
 
         if(!$(preview).find('textarea').length){

@@ -53,9 +53,7 @@
   }
   </style>
 </head>
-
 <body>
-  <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
       <h1>The page you were looking for doesn't exist.</h1>

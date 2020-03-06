@@ -8,10 +8,6 @@ class PostController {
         $this->model = new PostModel();
     }
 
-    public function dataPost() {
-        return $this->model->get();
-    }
-
     public function addPost($tabName){
         return $this->model->post($tabName);
     }
@@ -24,7 +20,7 @@ class PostController {
         return $this->model->update($id);
     }
 
-    public function hashExist ($hash){
-        return $this->model->hash($hash);
+    public function setHash(){
+        return $this->model->getHash();
     }
 }
