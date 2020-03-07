@@ -22,7 +22,7 @@ class PostModel {
     $statement->bindParam(':title', $_POST['name'], PDO::PARAM_STR);
     $statement->bindParam(':autor', $_POST['autor'], PDO::PARAM_STR);
     $statement->bindParam(':content', $_POST['content'], PDO::PARAM_STR);
-    $statement->bindParam(':urlPost', hash('md4', $_POST['name']) , PDO::PARAM_STR);
+    $statement->bindParam(':urlPost', hash('md4', ($_POST['name'] . microtime(1))), PDO::PARAM_STR);
     $statement->execute();
   }
 
@@ -43,17 +43,10 @@ class PostModel {
     $statement->execute();
   }
 
-  public function getHash(){
-    $query = "SELECT urlPost FROM posts";
-
-    $statement = $this->db->prepare($query);
-    $statement->execute();
-  }
-
   public function filterHash($hash){
     $query = "SELECT * FROM posts WHERE urlPost='$hash'";
-
     $statement = $this->db->prepare($query);
     $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_OBJ);
   }
 }

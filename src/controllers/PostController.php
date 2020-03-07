@@ -19,8 +19,4 @@ class PostController {
     public function savePost($id){
         return $this->model->update($id);
     }
-
-    public function setHash(){
-        return $this->model->getHash();
-    }
 }

@@ -23,6 +23,12 @@ class Router {
   }
 
   public function view($dir){
-    require (array_key_exists($dir, $this->route) ? $this->route[$dir] : 'src/views/404.php');
+    $url = $_SERVER['REQUEST_URI'];
+    if(stristr($url, "article")){
+      require 'controllers/ArticleController.php';
+    }
+    else{
+      require (array_key_exists($dir, $this->route) ? $this->route[$dir] : 'src/views/404.php');
+    }
   }
 }

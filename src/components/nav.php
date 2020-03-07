@@ -10,7 +10,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
+          <a class="nav-link" href="#">article</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Sample Post</a>

@@ -12,10 +12,10 @@ $(document).ready(function(){
         
         const id = event.target.id;
         let preview = $(`#${id.replace('edit', '')}`);
-
         if(!$(preview).find('textarea').length){
+            preview.find('.post-container').removeAttr('href');
             preview.find('.post-title')
-                        .replaceWith(`<input class='post-title' value='${$.trim(preview.find('.post-title').html())}'>`);
+                        .replaceWith(`<input class='post-title' value='${$.trim(preview.find('.post-title').html())}'>`).removeAttr();
 
             preview.find('.post-subtitle')
                         .replaceWith(`<textarea class="post-subtitle" style='width: 100%; font-size: 30px'>${$.trim(preview.find('.post-subtitle').html())}</textarea>`);

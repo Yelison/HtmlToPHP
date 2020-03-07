@@ -29,7 +29,7 @@
                     <span type='submit' class='button delete-post' name='delete' value='delete' id='del<?php echo $post->id?>'>x</span>
                     <span type='submit' class='button fas fa-edit edit-post' name='edit' value='edit' id='edit<?php echo $post->id?>'></span>
                 </div>
-                <a class='post-container' href='about/<?php echo $post->urlPost?>'>
+                <a class='post-container' href='article/<?php echo $post->urlPost?>'>
                   <h2 class='post-title'>
                     <?php echo $post->title?>
                   </h2>
@@ -53,10 +53,10 @@
     <?php
       include 'src/components/footer.php';
     ?>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="src/public/js/clean-blog.min.js"></script>
-    <script src="src/public/js/jquery.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/public/js/clean-blog.min.js"></script>
+    <script src="/src/public/js/jquery.js"></script>
   </body>
 </html>
 
