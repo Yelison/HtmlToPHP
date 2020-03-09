@@ -23,8 +23,8 @@ class Router {
   }
 
   public function view($dir){
-    $url = $_SERVER['REQUEST_URI'];
-    if(stristr($url, "article")){
+    $request = trim($_SERVER['REQUEST_URI'],"/");
+    if(explode("/",$request)[0] == 'article'){
       require 'controllers/ArticleController.php';
     }
     else{

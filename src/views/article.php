@@ -1,6 +1,15 @@
 <?php
-    $hash = str_replace('article/', '', trim($_SERVER['REQUEST_URI'],"/"));
-    $post = $this->model->filterHash($hash)[0];
+    $request = trim($_SERVER['REQUEST_URI'],"/");
+    $hash = explode("/",$request);
+    $hashExist = $this->model->hasExist($hash[1]);
+    $hashExist[0][0];
+
+    if($hashExist[0][0]){
+      $post = $this->model->filterHash($hash[1])[0];
+    } else{
+      require '404.php';
+      die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

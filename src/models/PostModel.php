@@ -2,6 +2,7 @@
 
 use bcmPHP\db\Connection;
 use PDO;
+use MYSQLI;
 
 class PostModel {
   private $db;
@@ -41,6 +42,13 @@ class PostModel {
     $statement->bindParam(':autor',  $_POST['autorSave'], PDO::PARAM_STR);
     $statement->bindParam(':content', $_POST['contentSave'], PDO::PARAM_STR);
     $statement->execute();
+  }
+
+  public function hasExist($hash){
+    $count = "SELECT count( * ) FROM posts WHERE urlPost = '$hash'";
+    $statement = $this->db->prepare($count);
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_NUM);
   }
 
   public function filterHash($hash){
